@@ -17,6 +17,8 @@
 	</head>
 	<body>
 		<div class="reveal">
+			<!-- header top position -->
+			<header style="position: absolute; top: 50px; left: 100px; z-index:500; font-size:1.6em"></header>
 			<div class="slides">
 				<section>
 					<a href="https://github.com/zoometh/rockart">
@@ -47,26 +49,43 @@
 					<section>
 						<h2>At the &mu;m scale</h2>
 						<a href="https://www.sensofar.com/cs17_prehistoric-tool-use-and-the-evolution-of-landscapes-a-3d-microwear-perspective">
-							<img src="https://cdn-codno.nitrocdn.com/cvzuyGhVgHRiUuxfkFjAjSveRtjVlltF/assets/static/optimized/rev-000c82d/wp-content/uploads/2021/03/cs17-IMF-CSIC-prehistoric-tool-5.jpg" alt="reveal.js logo" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+							<img src="https://cdn-codno.nitrocdn.com/cvzuyGhVgHRiUuxfkFjAjSveRtjVlltF/assets/static/optimized/rev-000c82d/wp-content/uploads/2021/03/cs17-IMF-CSIC-prehistoric-tool-5.jpg" alt="reveal.js logo" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 						</a>
 					</section>
 					<section>
 						<h2>At the cm scale</h2>
-						<a href="http://www.cfeetk.cnrs.fr/archives/?n=144483">
-							<img src="https://api.nakala.fr/iiif/11280%2Fda0c5b75/bee29221201fcfeb07ad02f50747c7bfd8625da5/full/1024,/0/default.jpg" alt="reveal.js logo" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						<a href="https://tel.archives-ouvertes.fr/tel-00712290">
+							<img src="https://raw.githubusercontent.com/zoometh/rockart/main/www/19_4_21alpha_NB.jpg" alt="reveal.js logo" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 						</a>
 					</section>
 					<section>
 						<h2>At the metric scale</h2>
 						<a href="https://github.com/zoometh/popland">
-							<img src="https://raw.githubusercontent.com/zoometh/popland/main/doc/data/sidbury/sidbury_rayshader.png" alt="reveal.js logo" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+							<img src="https://raw.githubusercontent.com/zoometh/popland/main/doc/data/sidbury/sidbury_rayshader.png" alt="reveal.js logo" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 						</a>
 					</section>
 				</section>
-				<section data-background-color="rgb(70, 70, 255)">
-					🌹 Feliz Sant Jordi Chica 🌹
+
+				<section data-state="header1">
+					<style>.header1 header:after { content: "Header 1 Example"; }</style>
+					<p>header1 example</p>
 				</section>
+
 				<section>
+					<section data-state="header1" data-background-iframe="https://zoometh.github.io/3DHOP/minimal/lithic_tool.html" data-background-interactive>
+						<style>.header1 header:after { content: "Web3D"; }</style>
+					</section>
+					<section data-state="header1" data-background-iframe="https://zoometh.github.io/Rdev/3d/standard_stack.html" data-background-interactive>
+						<style>.header1 header:after { content: "Web3D"; }</style>
+					</section>
+				</section>
+
+				<section>
+					<section>
+					<a href="https://www.r-project.org/">
+						<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					ConFocal <code>.dat</code> ➡️ <code>.xyz</code>
 					<pre><code data-trim data-noescape data-line-numbers="3-4|5-6|7|8-9">
 						# clean a .dat file coming from the Confocal
 						# and export it to .xyz
@@ -79,6 +98,34 @@
 									sep = " ", row.names = FALSE, col.names = FALSE)
 					</code></pre>
 				  </section>
+
+				  <section>
+					<section>
+					<a href="https://www.r-project.org/">
+						<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					File <code>.xyz</code>
+					<pre><code data-trim data-noescape data-line-numbers="1">
+						1163.800903	1884.78186	-134.619141
+						1163.800903	1895.481812	-135.691895
+						1154.042236	1895.481812	-134.619141
+						25.862251	1828.182739	-134.619141
+						25.862251	1829.831421 -134.89502
+						24.993202	1829.831421 -134.619141
+						1174.742554	1889.450562	-134.619141
+						1174.742554 1895.481812 -135.005859
+						47.745689	1816.550171 -134.619141
+						47.745689	1818.889771 -135.354126
+						37.796516	1818.889771 -134.619141
+						1177.233032 1895.481812 -134.619141
+						1163.800903 1903.756226 -134.619141
+						36.803978	1829.831421 -136.988892
+						36.803978	1819.161255 -134.619141
+						1174.742554	1901.637085 -134.619141
+						47.745689 	1829.831421 -136.557495
+					</code></pre>
+				  </section>
+				</section>
 			</div>
 		</div>
 
