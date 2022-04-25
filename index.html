@@ -20,6 +20,7 @@
 			<!-- header top position -->
 			<header style="position: absolute; top: 50px; left: 100px; z-index:500; font-size:1.6em"></header>
 			<div class="slides">
+
 				<section>
 					<a href="https://github.com/zoometh/rockart">
 						<img src="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/prj_rockart_1.png" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
@@ -42,6 +43,7 @@
 				</section>
 
 				<section>
+
 					<section>
 						<h2>Introduction</h2>
 						<p>Anthropic actions create marks on natural backgrounds</p>
@@ -66,11 +68,6 @@
 					</section>
 				</section>
 
-				<section data-state="header1">
-					<style>.header1 header:after { content: "Header 1 Example"; }</style>
-					<p>header1 example</p>
-				</section>
-
 				<section>
 					<section data-state="header1" data-background-iframe="https://zoometh.github.io/3DHOP/minimal/lithic_tool.html" data-background-interactive>
 						<style>.header1 header:after { content: "Web3D"; }</style>
@@ -78,12 +75,14 @@
 					<section data-state="header1" data-background-iframe="https://zoometh.github.io/Rdev/3d/standard_stack.html" data-background-interactive>
 						<style>.header1 header:after { content: "Web3D"; }</style>
 					</section>
+
 				</section>
 
 				<section>
+
 					<section>
 					<a href="https://www.r-project.org/">
-						<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 140px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 					</a>
 					ConFocal <code>.dat</code> ➡️ <code>.xyz</code>
 					<pre><code data-trim data-noescape data-line-numbers="3-4|5-6|7|8-9">
@@ -97,12 +96,11 @@
 						write.table(file.data, paste0(file.path, "confoc_3d.xyz"),
 									sep = " ", row.names = FALSE, col.names = FALSE)
 					</code></pre>
-				  </section>
+					</section>
 
-				  <section>
 					<section>
 					<a href="https://www.r-project.org/">
-						<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 140px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 					</a>
 					File <code>.xyz</code>
 					<pre><code data-trim data-noescape data-line-numbers="1">
@@ -124,7 +122,91 @@
 						1174.742554	1901.637085 -134.619141
 						47.745689 	1829.831421 -136.557495
 					</code></pre>
-				  </section>
+					</section>
+
+					<section>
+						<a href="https://www.r-project.org/">
+							<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 140px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						</a>
+						3D analysis with with the package <a href="https://plotly.com/r/3d-scatter-plots/">geodiv</a>
+						<pre><code data-trim data-noescape data-line-numbers="1-3|5|7-10|12-14|15-16">
+							library(geodiv)
+							library(knitr)
+							library(kableExtra)
+							
+							xyz.mat <- as.matrix(xyz)
+							
+							sq.var <- sq(xyz.mat)
+							sa.var <- sa(xyz.mat)
+							sku.var <- sku(xyz.mat)
+							ssk.var <- ssk(xyz.mat)
+							
+							df.var <- data.frame(abbrev = c('Sq', 'Sa', 'Sku', 'Ssk', '...'),
+												 descr = c('Root mean square height', 'Average roughness', 'Kurtosis', 'Skewness', '...'),
+												 val = c(sq.var, sa.var, sku.var, ssk.var, '...'))
+							kable(df.var,"html") %>% 
+							  kable_styling(full_width = FALSE, position = "center", font_size = 12)
+						</code></pre>
+						</section>
+				  
+				  <section>
+					<a href="https://www.r-project.org/">
+						<img src="https://www.r-project.org/logo/Rlogo.svg" alt="reveal.js logo" style="height: 140px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					3D interactive plotting with the package <a href="https://plotly.com/r/3d-scatter-plots/">plot_ly</a>
+					<pre><code data-trim data-noescape data-line-numbers="1|3-4|6-14|17-23|26-39|42|44-45|47-48">
+						library(plotly)
+
+						url.www <- "https://raw.githubusercontent.com/zoometh/rockart/main/www/"
+						xyz <- read.csv(paste0(url.www, "/confoc_3d.xyz"), sep = " ", header = F)
+						
+						axx <- list(
+						  title = "X \u03BCm"
+						)
+						axy <- list(
+						  title = "Y \u03BCm"
+						)
+						axz <- list(
+						  title = "Z \u03BCm"
+						)
+						
+						## surface
+						surf3d <- plot_ly(x = ~xyz$V1, y = ~xyz$V2, z = ~xyz$V3,
+								intensity = ~xyz$V3, type = 'mesh3d',
+								colorbar = list(title = "Z \u03BCm"))  %>%
+						  layout(title = "ConFocal surface",
+								 scene = list(xaxis = axx, yaxis = axy, zaxis = axz,
+											  aspectmode = 'data'))
+						surf3d
+						
+						## surface with a marker
+						surf3d_mark <- plot_ly()%>%
+						  add_trace(type = "scatter3d", mode="markers", 
+									x = 1282.68, y = 1246.93, z = -9.86,
+									marker = list(size = 10,
+												  color = '#FF0000',
+												  opacity = .3)
+									) %>%
+						  add_trace(x = ~xyz$V1, y = ~xyz$V2, z = ~xyz$V3,
+									intensity = ~xyz$V3, type = 'mesh3d',
+									colorbar = list(title = "Z \u03BCm")) %>%
+						  layout(title = "ConFocal surface",
+								 scene = list(xaxis = axx, yaxis = axy, zaxis = axz,
+											  aspectmode = 'data'))
+						surf3d_mark
+						
+						## export in HTML
+						library(htmlwidgets)
+						
+						saveWidget(as_widget(surf3d), "surf3d.html")
+						# creates https://zoometh.github.io/rockart/surf3d
+						
+						saveWidget(as_widget(surf3d_mark), "surf3d_mark.html")
+						# creates https://zoometh.github.io/rockart/surf3d_mark
+
+					</code></pre>
+					</section>
+
 				</section>
 			</div>
 		</div>
