@@ -355,3 +355,15 @@ section.has-light-background, section.has-light-background h1, section.has-light
     background-color: var(--r-background-color);
   }
 }
+
+/*********************************************
+ * THOMAS
+ *********************************************/
+ .reveal .caption
+ {
+     /* display:block; */
+     -webkit-transform: rotate(-90deg); 
+     -moz-transform: rotate(-90deg); 
+     font-size: 0.6em;
+     color: grey;
+ }
