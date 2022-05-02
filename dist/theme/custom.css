@@ -250,7 +250,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 .reveal table th,
 .reveal table td {
+  font-size: 0.8em;
   text-align: left;
+  vertical-align: middle;
   padding: 0.2em 0.5em 0.2em 0.5em;
   border-bottom: 1px solid;
 }
@@ -361,11 +363,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
  .reveal .caption
  {
-     /* display:block; */
-     -webkit-transform: rotate(-90deg); 
-     -moz-transform: rotate(-90deg); 
-     font-size: 0.6em;
-     color: grey;
+  /* display:block; */
+  /* -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg);  */
+    text-align: center;
+    font-size: 0.6em;
+    color: grey;
  }
 
  .reveal .filename
@@ -377,5 +380,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
  .reveal .stacktablecell
  {
     text-align: center;
+    vertical-align: middle;
     font-size: 1.5em;
  }
