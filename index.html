@@ -229,6 +229,7 @@
 						</table>
 						<aside class="notes">
 							textures: project a 2D image onto a 3D structure
+							Convert your 3D models to 3D streaming models with <a href="http://vcg.isti.cnr.it/nexus/">Nexus</a> (<code>.ply</code>➡️<code>.nxs</code>➡️<code>.nxz</code>)
 						</aside>
 					</section>
 
@@ -283,6 +284,10 @@
 						<small><b>STructured light (STL)</b> Smart SCAN 3D Breuckman laser 3D acquisition (M. Mozota, IMF-CSIC)</small>
 					</section>
 
+					<section data-state="header1" data-background-iframe="https://zoometh.github.io/3DHOP/minimal/lithic_tool_stl.html" data-background-interactive>
+						<style>.header2 header:after { content: "Web3D"; }</style>
+					</section>
+
 					<section>
 						<h3>Confocal acquisition (use-wear)</h3>
 						<img src="https://raw.githubusercontent.com/zoometh/rockart/main/www/confoc.jpg" alt="" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"><br>
@@ -314,25 +319,36 @@
 					</section>
 
 					<section>
+						<h3>Aligning and merging meshes</h3>
+						<img src="https://raw.githubusercontent.com/zoometh/rockart/main/www/Meshlab-aligned.gif" alt="" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						<small>Align the STL and the Photogrammetry 3D models with <a href="https://www.meshlab.net/">Meshlab</a></small>
+						<aside class="notes">
+							Here with Meshlab
+							Resiudal error
+						</aside>
+					</section>
+
+					<section>
+						<h3>Draw the ROI</h3>
+						<img src="https://raw.githubusercontent.com/zoometh/rockart/main/www/blender-aligned-999.gif" alt="" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						<small>Open models in <a href="https://www.blender.org/">Blender</a></small>
+						<aside class="notes">
+							Here with Blender
+						</aside>
+					</section>
+
+					<section>
 						<h3>Link traces and surface</h3>
-						<img src="https://raw.githubusercontent.com/zoometh/rockart/main/www/blender_roi.png" alt="" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						<img src="https://raw.githubusercontent.com/zoometh/rockart/main/www/blender-roi-999.gif" alt="" style="height: 480px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 						<small>Create 'hotspot' geometry with <a href="https://www.blender.org/">Blender</a></small>
 						<aside class="notes">
 							Hotspots: semi-transparent simple geometries (<code>.ply</code>) for ConFocal acquisition
+							Steps pt, convexhull, etc.
 						</aside>
 					</section>
 
 					<section data-state="header1" data-background-iframe="https://zoometh.github.io/3DHOP/minimal/lithic_tool.html" data-background-interactive>
 						<style>.header2 header:after { content: "Web3D"; }</style>
-					</section>
-
-					<section>
-						<h3>Notes</h3>
-						<ol>
-							<li>
-								Convert your 3D models to 3D streaming models with <a href="http://vcg.isti.cnr.it/nexus/">Nexus</a> (<code>.ply</code>➡️<code>.nxs</code>➡️<code>.nxz</code>)
-							</li>
-						</ol>
 					</section>
 
 				</section>
