@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Roca dels Moros</title>
+		<meta name="description" content="Integration of multiscalar 3D model for use-wear analysis">
+		<meta name="author" content="Thomas Huet">
+
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+
+		<link rel="icon" href="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/prj_cogul.png">
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- header top position -->
+			<header style="position: absolute; top: 50px; left: 100px; z-index:500; font-size:1.6em"></header>
+			<div class="slides">
+
+				<section>
+					<img src="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/prj_cogul.png" alt="" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					<h3>Hypersectral analysis and semantisation of the Roca dels Moros (Lleida, Spain) </h3>
+					<!-- <small><b>9<sup>th</sup> Seminar of Prehistoric Technology</b>, CSIC-IMF, Barcelona, 2-4 May 2022</small> -->
+					<p>
+						<smaller>
+								<span>
+								<span style="font-size: 40px;">Thomas Huet</span> <span style="font-size: 30px;">University of Oxford</span><br>
+								<span style="font-size: 40px;">Claudia Sciuto</span> <span style="font-size: 30px;">Università di Pisa</span><br>
+								<img src="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/inst-uni-oxford.png" alt="" style="height: 100px; margin: 0 auto 4rem auto; background: transparent; vertical-align: middle;" class="demo-logo">
+								<img src="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/inst-uni-pisa.png" alt="" style="height: 100px; margin: 0 auto 4rem auto; background: transparent; vertical-align: middle;" class="demo-logo">
+								</a>
+								</span>
+						</smaller>
+					</p>
+				</section>
+
+				<section data-background="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/prj_cogul-workflow.png">
+					<aside class="notes">
+						Analysis
+						We propose a study of the Roca dels Moros with a characterization of the painting technique and a characterization of the iconographic content of the panel.
+						The painting techniques will be characterized by hyperspectral and pXRF analysis. The hyperspectral analysis will characterize the chemical signature of the paintings. The pXRF is a complementary solution…. Macro photos will be taken with a DinoLite (x20-x200) useful for superimpostions
+						The iconography will be characterized using the model of the icon R package which allows at the same time the spatial distribution, the classification in standardized categories, and the analysis of the shapes.
+						These different results will be confronted to each other by a multifactorial analysis (MFA).
+						Outputs
+						Our approach is clearly oriented towrd Open Science
+						If we are able to recognize statistical regularities in the technical and iconographic signatures, we aim to publish them in a scientific journal.
+						The workflow including data collection, data description, data storage, etc., in a word the DMP, as well as the informatics (code) will be published in a methodological article.
+						Our data, both for technical and iconographic signatures, will be published in a data paper.
+						Finally, we also aim at open source and free access in order to provide IT tools to a large public and/or to the scientific community.
+
+					</aside>
+				</section>
+
+				<section data-transition="slide" data-background="#ff0000" data-background-transition="slide">
+					<h1>Study of representation techniques</h1>
+				</section>
+
+				<section data-background="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/tek_hyperspect.png">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Paintings</h2>
+						<!-- <smaller>composition analysis</smaller> -->
+						<p><b>Hyperspectral imaging (HSI)</b> is a technique that allows the collection and overlapping of images in different bands of the electromagnetic spectrum, usually the visible and the Near Infrared</p>
+						<!-- <br><br> -->
+						<p><span style="font-size: 15px;">Linderholm, J., Geladi, P., & <b>Sciuto, C.</b> (2015). Field-based near infrared spectroscopy for analysis of Scandinavian Stone Age rock paintings. Journal of near Infrared spectroscopy, 23(4), 227-236, doi: <a href="https://doi.org/10.1255/jnirs.1172">https://doi.org/10.1255/jnirs.1172</a></span></p>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/tek_hyperspect_1.png">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Paintings</h2>
+						<!-- <smaller>composition analysis</smaller> -->
+						<p>For each pixel in the image the camera collects collect a continuum spectrum. This allows enhancing hiddens figures and mapping the pigments (or other coatings on the surface) based on their molecular composition.
+							<br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/tek_xrf.png">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Paintings</h2>
+						<p><b>X-Ray Fluorescence spectrometry (XRF)</b> and Portable XRF (pXRF) to characteristise chemical elements
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+						mapping on roman painted plasters
+					</aside>
+				</section>
+
+				<section data-background="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/tek_sauri_r3bis.png">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Engravings</h2>
+						<!-- <smaller>AM4013MZT(R9)</smaller> -->
+						<p><b>DinoLite</b> Portable electronic magnifier (x20 - x200) used to study the technics of engravings and the superimpositions between engravings<br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<div style="position: absolute; width: 40%; top:-200px; right:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 5px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 5px; font-size: 20px; text-align: left;">
+					<img src="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/tek_sauri_r3bis-6.png"  height="300">
+					</div>
+					<aside class="notes">
+						Used in Sauri (Pallars Sobira)
+					</aside>
+				</section>
+
+				<section data-transition="slide" data-background="#00ff00" data-background-transition="slide">
+					<h1>Study of representation iconography</h1>
+				</section>
+
+				<section data-background-iframe="https://zoometh.github.io/iconr/index.html">
+					<div style="position: absolute; width: 30%; right:-100px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Iconr package</h2>
+						<smaller>composition analysis</smaller>
+						<p><span style="font-size: 15px;"><b>Huet, T.</b>, Pozo, J. M., & Alexander, C. (2021). Analysis of Prehistoric Iconography with the R package iconr. Journal of Open Source Software, 6(61), 3191, doi: <a href="https://doi.org/10.21105/joss.03191">https://doi.org/10.21105/joss.03191</a></span></p>
+						<!-- <p>The R package iconr is grounded in graph theory and spatial analysis to offer concepts and functions to contribute to cross-cultural comparison through a greater normalization of quantitative analysis.<br> -->
+						<!-- <br> -->
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://zoometh.github.io/iconr/articles/img/typo_gu_figuratif.html">
+					<div style="position: absolute; width: 30%; right:-100px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Iconr package</h2>
+						<smaller>Typology</smaller>
+						<p>The Iconr thesaurus will be aligned to the Getty Art & Architecture Thesaurus (AAT) and/or the Getty Iconography Authority (IA): thesauri for art, architecture and material culture<br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://momx.github.io/Momocs/">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Iconr package</h2>
+						<smaller>shape analysis</smaller>
+						<p><br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-transition="slide" data-background="#0000ff" data-background-transition="slide">
+					<h1>Research data management</h1>
+				</section>
+
+				<section data-background-iframe="https://patrimoni.gencat.cat/ca/monuments/monumentos/conjunt-rupestre-de-la-roca-dels-moros-el-cogul/visita-virtual/visita-lliure/">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Conjunt rupestre<br>La Roca dels Moros</h2>
+						<!-- <smaller>EAMENA-0164997</smaller> -->
+						<p>Use an interactive web IIIF<sup>*</sup>	 (Openseadragon) alongside with a 3D viewer (Sketchfab)<br>
+							<br>
+						<small>* International Image Interoperability Framework</small>
+						
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://visual.ariadne-infrastructure.eu/browse">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>ARIADNEplus</h2>
+						<!-- <smaller>EAMENA-0164997</smaller> -->
+						<p> The <b>Visual Media Service</b> for the showcase of 3D data, RTI and gigapixel image (IIIF). Uses 3DHOP for 3D models<br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://dialnet.unirioja.es/servlet/articulo?codigo=8172846" data-background="#ffffff">
+					<div style="position: absolute; width: 30%; left:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2 style="color: #fff;">Giravolt</h2>
+						<!-- <smaller>EAMENA-0164997</smaller> -->
+						<p> Dissemination of 3D techniques and best practices in heritage institutions. 3D digitization of heritage objects deposited on Sketchfab, CC-BY license<br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://zoometh.github.io/3DHOP/minimal/cogul.html">
+					<div style="position: absolute; width: 30%; right:-200px ; top:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>3DHOP/GitHub</h2>
+						<!-- <smaller>EAMENA-0164997</smaller> -->
+						<p>We propose an integration of our research on 3DHOP/GitHub<br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+						Pick Point,
+						It will be interesting to properly define what is a 'scene' by quantitatives indices
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://www.go-fair.org/fair-principles/">
+					<div style="position: absolute; width: 30%; left:-200px ; top:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>FAIR<sup>*</sup> principles</h2>
+						<p>In the context of Internet accessibility, and the sharing and opening of data for research (Open Science)<br>
+						<br>
+						<small>Findable, Accessible, Interoperable, Reusable</small>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-background-iframe="https://archaeo.peercommunityin.org/">
+					<div style="position: absolute; width: 30%; right:-200px ; top:-200px ; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Peer-reviewed collaborative work</h2>
+						<!-- <smaller>EAMENA-0164997</smaller> -->
+						<p>We aim to expose the progress of our work, with data samples, through peer-reviewed working papers<br>
+						<br>
+						<!-- <smaller><a href="https://whc.unesco.org/en/list/1208/">https://whc.unesco.org/en/list/1208/</a></smaller> -->
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background="https://raw.githubusercontent.com/zoometh/thomashuet/main/img/prj_cogul-workflow.png">
+					<aside class="notes">
+						Workflow
+					</aside>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
