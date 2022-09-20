@@ -382,4 +382,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
     text-align: center;
     vertical-align: middle;
     font-size: 1.5em;
+    border-style: solid;
+    border-color: white;
  }
